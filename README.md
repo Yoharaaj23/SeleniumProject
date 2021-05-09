@@ -28,7 +28,7 @@ These 2 classes would saves time while designing and maintenance effort will be 
 3. TestRunner - to run the tests
 
 ##Further Improvements
-- Create method to add more quantity & select different size
 - Create reusable method to select item with its title
 - Create reusable methods to navigate to different pages. 
     e.g, One method to navigate to "WOMEN" or "DRESSES" or "T-SHIRTS" 
+- Support multiple browsers

@@ -63,60 +63,71 @@ public class StepDefinitions {
             fail("Account Page is not visible");
         }
     }
+
     @Then("update is success")
     public void updateSuccess() {
         LoginPage loginPage = new LoginPage(driver);
         assertTrue("Expecting Update is success", loginPage.isUpdateSuccess());
     }
+
     @And("I select T-SHIRTS section")
-        public void selectTshirtSection(){
-            OrderPage orderPage = new OrderPage(driver);
-            orderPage.clickTshirtSection();
-            assertTrue("Expecting T-shirt section to be visible", orderPage.isTshirtSectionVisible());
-        }
+    public void selectTshirtSection() {
+        OrderPage orderPage = new OrderPage(driver);
+        orderPage.clickTshirtSection();
+        assertTrue("Expecting T-shirt section to be visible", orderPage.isTshirtSectionVisible());
+    }
+
     @And("add the first tshirt to cart")
-    public void addToCart(){
+    public void addToCart() {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.addFirstItemToCart();
         assertTrue("Expecting T-shirt to be added to cart successfully", orderPage.isItemAdded());
     }
+
     @And("proceed to checkout")
-    public void orderCheckout(){
+    public void orderCheckout() {
         OrderPage orderPage = new OrderPage(driver);
-       orderPage.clickSummaryCheckout();
+        orderPage.clickSummaryCheckout();
     }
+
     @And("verify the item price {string} in summary page")
-    public void verifyItemPrice(String itemPrice){
+    public void verifyItemPrice(String itemPrice) {
         OrderPage orderPage = new OrderPage(driver);
         assertTrue("Expecting Item price is valid", orderPage.verifyItemPrice(itemPrice));
     }
+
     @And("proceed to Address section")
-    public void addressection(){
+    public void addressection() {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.proceedToAddress();
     }
+
     @And("proceed to Shipping section and accept Terms of service")
-    public void shippingSection(){
+    public void shippingSection() {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.proceedToShipping();
     }
+
     @And("proceed to Payment section")
-    public void paymentSection(){
+    public void paymentSection() {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.proceedToPayment();
     }
+
     @And("click Pay by bank wire and confirm the order")
-    public void confirmOrder(){
+    public void confirmOrder() {
         OrderPage orderPage = new OrderPage(driver);
         orderPage.confirmOrder();
     }
+
     @Then("order is successful")
-    public void orderComplete(){
+    public void orderComplete() {
         OrderPage orderPage = new OrderPage(driver);
         assertTrue("Expecting Order to be completed", orderPage.isOrderComplete());
     }
+
     @Then("navigate to order history and verify the order")
-    public void verifyOrderHistory(){
+    public void verifyOrderHistory() {
         OrderPage orderPage = new OrderPage(driver);
         assertTrue("Expecting the Order Reference is valid", orderPage.verifyOrderHistory());
     }

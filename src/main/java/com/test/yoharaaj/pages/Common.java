@@ -14,10 +14,11 @@ public class Common {
         this.driver = driver;
     }
 
-    public  ExpectedCondition getPageLoadCondition(By element){
+    public ExpectedCondition getPageLoadCondition(By element) {
         return ExpectedConditions.visibilityOf(driver.findElement(element));
     }
-    public  ExpectedCondition getFieldClickableCondition(By element){
+
+    public ExpectedCondition getFieldClickableCondition(By element) {
         return ExpectedConditions.visibilityOf(driver.findElement(element));
     }
 
@@ -26,6 +27,7 @@ public class Common {
         WebDriverWait wait = new WebDriverWait(driver, timeOut);
         wait.until(getPageLoadCondition(element));
     }
+
     public void waitUntilClickable(By element) {
         int timeOut = 5;
         WebDriverWait wait = new WebDriverWait(driver, timeOut);

@@ -9,6 +9,11 @@ This automation pack has 2 following scenarios,
 2. Order T-Shirt and verify Order History
 
 ##Execution Reports Screenshots
+Once the tests are completed, report will be generated in the target/cucumber-reports.html
+Attached the execution report in the ExecutionReport/ directory.
+![image](ExecutionReport/Execution_Report.png)
+![image](ExecutionReport/Execution_Summary.png)
+[cucumber-reports.html](ExecutionReport/cucumber-reports.html)
 
 ##File Structure
 
